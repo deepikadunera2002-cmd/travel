@@ -1,0 +1,530 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:rgba(0,0,0,0.85);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 30px;
+    z-index:1000;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo img{
+    height:50px;
+}
+
+.logo span{
+    color:#ffd700;
+    font-size:28px;
+    font-weight:bold;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    align-items:center;
+}
+
+nav ul li{
+    position:relative;
+    margin-left:20px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+}
+
+nav ul li a:hover{
+    color:#ffd700;
+}
+
+/* DROPDOWN */
+
+.dropdown-menu{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    background:white;
+    min-width:180px;
+    list-style:none;
+    border-radius:5px;
+    overflow:hidden;
+}
+
+.dropdown-menu li{
+    margin:0;
+}
+
+.dropdown-menu li a{
+    display:block;
+    padding:12px;
+    color:black;
+}
+
+.dropdown-menu li a:hover{
+    background:#f1f1f1;
+}
+
+.dropdown:hover .dropdown-menu{
+    display:block;
+}
+
+/* HERO */
+
+.hero{
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+    url("images/hero-bg.jpg");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero-content{
+    color:white;
+}
+
+.hero-content h1{
+    font-size:70px;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:24px;
+    margin-bottom:30px;
+}
+
+.hero-content button{
+    padding:15px 35px;
+    border:none;
+    border-radius:30px;
+    background:#ffd700;
+    font-size:18px;
+    cursor:pointer;
+}
+
+/* DESTINATIONS */
+
+.destinations{
+    padding:100px 50px;
+    background:#243b55;
+    text-align:center;
+}
+
+.destinations h2{
+    color:white;
+    font-size:45px;
+    margin-bottom:40px;
+}
+
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:320px;
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    display:block;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card-content h3{
+    margin-bottom:10px;
+}
+
+/* GALLERY */
+
+.gallery{
+    padding:50px 50px;
+    text-align:center;
+    background:#f5f5f5;
+}
+
+.gallery h2{
+    font-size:45px;
+    margin-top:-20px;
+    margin-bottom:30px;
+}
+
+
+.gallery video{
+    width:700px;
+    max-width:100%;
+    border-radius:15px;
+    margin-bottom:40px;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+    max-width:1000px;
+    margin:auto;
+}
+
+.gallery-grid img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    border-radius:15px;
+}
+
+/* LOCATION */
+
+.location{
+    padding:100px 50px;
+    background:#203a43;
+    text-align:center;
+}
+
+.location h2{
+    color:white;
+    margin-bottom:40px;
+}
+
+.location-container{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.location-card{
+    width:300px;
+    background:white;
+    padding:20px;
+    border-radius:20px;
+}.location h2{
+    color:white;
+    font-size:40px;
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.india-map{
+    width:600px;
+    max-width:100%;
+    display:block;
+    margin:30px auto;
+}
+
+/* CONTACT */
+
+.contact{
+    padding:100px 50px;
+    background:#f5f5f5;
+    text-align:center;
+}
+
+.contact h2{
+    margin-bottom:20px;
+}
+
+.contact-text{
+    margin-bottom:40px;
+}
+
+.contact-container{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.contact-info{
+    width:350px;
+    background:white;
+    padding:25px;
+    border-radius:20px;
+}
+
+.contact-form{
+    width:400px;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    padding:15px;
+    border:1px solid #ddd;
+    border-radius:10px;
+}
+
+.contact-form button{
+    padding:15px;
+    border:none;
+    border-radius:30px;
+    background:#243b55;
+    color:white;
+    cursor:pointer;
+}
+
+/* AUDIO */
+
+.audio-section{
+    padding:80px 50px;
+    text-align:center;
+}
+
+.audio-section h2{
+    margin-bottom:20px;
+}
+
+.audio-section audio{
+    width:400px;
+    max-width:100%;
+}
+
+/* FOOTER */
+
+footer{
+    background:#333;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* FIX NAVBAR SCROLL */
+
+#home,
+#destinations,
+#gallery,
+#location,
+#contact,
+#agra,
+#goa,
+#manali{
+    scroll-margin-top:90px;
+}.popup{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.9);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.popup img{
+    max-width:90%;
+    max-height:90%;
+    border-radius:10px;
+}
+
+.close-btn{
+    position:absolute;
+    top:20px;
+    right:30px;
+    font-size:40px;
+    color:white;
+    cursor:pointer;
+}footer{
+    background:#333;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* Paste niche se */
+
+.dropdown{
+    position:relative;
+}
+
+.dropdown-menu{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    background:white;
+    list-style:none;
+    min-width:180px;
+    padding:0;
+    margin:0;
+}
+
+.dropdown-menu li a{
+    display:block;
+    padding:12px;
+    color:black;
+    text-decoration:none;
+}
+
+.dropdown-menu li a:hover{
+    background:#f1f1f1;
+}
+
+.dropdown:hover .dropdown-menu{
+    display:block;
+}.location h2{
+    color: white;
+    font-size: 40px;
+    margin: 40px 0 20px;
+    text-align: center;
+}.location-info{
+    display:none;
+    margin-top:10px;
+    text-align:left;
+}
+
+.location-info.show{
+    display:block;
+}.location-card h3{
+    margin-bottom:10px;
+    color:black;
+}
+
+.location-card p{
+    margin:5px 0;
+    color:black;
+    display:block;
+}.location-card{
+    width:300px;
+    background:white;
+    padding:20px;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+.location-info{
+    display:none;
+    margin-top:10px;
+    text-align:left;
+}
+
+.location-info.show{
+    display:block;
+}.location h2{
+    color:white;
+    font-size:40px;
+    margin:50px 0 30px;
+    text-align:center;
+}.india-map{
+    display:block;
+    margin:80px auto 30px auto;
+}@media (max-width: 768px) {
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .logo h1 {
+        font-size: 20px;
+    }
+}@media (max-width: 768px) {
+
+    nav{
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    nav ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 0;
+    }
+
+    nav ul li a{
+        font-size: 14px;
+    }
+
+    .logo{
+        margin-bottom: 10px;
+    }
+
+    .hero-content h1{
+        font-size: 50px;
+    }
+}.hero-content button{
+    background:#ffd700;
+    color:black;
+    border:none;
+    padding:15px 40px;
+    font-size:22px;
+    border-radius:30px;
+    cursor:pointer;
+    transition:all 0.3s ease;
+}
+
+.hero-content button:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 25px #ffd700;
+}.slider{
+    position:relative;
+    width:100%;
+    height:500px;
+}
+
+.slide{
+    position:absolute;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:none;
+}
+
+.slide.active{
+    display:block;
+}

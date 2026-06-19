@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Guide India</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            <img src="images/logo.png" alt="Travel Guide India Logo">
+            <span>Travel Guide India</span>
+        </div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+
+            <li class="dropdown">
+                <a href="#destinations">Destinations ▼</a>
+
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="#" onclick="openPopup('images/tajmahal.jpg'); return false;">
+                            Agra
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" onclick="openPopup('images/goa.jpg'); return false;">
+                            Goa
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" onclick="openPopup('images/manali.jpg'); return false;">
+                            Manali
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#location">Location</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        </ul>
+    </nav>
+    <!-- Hero Section -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+            <h1>Explore Incredible India</h1>
+
+            <p>
+                Discover Mountains, Beaches,
+                Heritage Sites & Culture
+            </p>
+
+            <button onclick="openVideoPopup()">Explore Now</button>
+        </div>
+
+    </section>
+    <section id="destinations" class="destinations">
+
+        <h2>Popular Destinations</h2>
+
+        <div class="cards">
+
+            <div id="agra" class="card">
+                <a href="images/tajmahal.jpg" target="_blank">
+                    <img src="images/tajmahal.jpg" alt="Agra">
+                </a>
+                <div class="card-content">
+                    <h3>Agra</h3>
+                    <p>Home of the magnificent Taj Mahal.</p>
+                </div>
+            </div>
+
+            <div id="goa" class="card">
+                <a href="images/goa.jpg" target="_blank">
+                    <img src="images/goa.jpg" alt="Goa"></a>
+                <div class="card-content">
+                    <h3>Goa</h3>
+                    <p>India's most famous beach paradise.</p>
+                </div>
+            </div>
+
+            <div id="manali" class="card">
+                <a href="images/manali.jpg" target="_blank">
+                    <img src="images/manali.jpg" alt="Manali">
+                </a>
+                <div class="card-content">
+                    <h3>Manali</h3>
+                    <p>Snowy mountains and adventure sports.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section id="gallery" class="gallery">
+        <h2>Explore India Video</h2>
+
+        <video controls width="700">
+            <source src="videos/india-videos.mp4" type="video/mp4">
+        </video>
+    </section>
+
+    <section class="gallery">
+
+        <h2>India Gallery</h2>
+
+       <div class="slider">
+    <img src="images/gallery1.jpg" class="slide active">
+    <img src="images/gallery2.jpg" class="slide">
+    <img src="images/gallery3.jpg" class="slide">
+    <img src="images/gallery4.jpg" class="slide">
+</div>
+
+    </section>
+    <section id="location" class="location">
+
+        <h2>Top Tourist Locations</h2>
+
+        <div class="location-container">
+
+
+
+            <div class="location-card">
+                <h3>Jaipur</h3>
+                <p>The Pink City famous for forts, palaces and royal culture.</p>
+            </div>
+
+            <div class="location-card">
+                <h3>Kerala</h3>
+                <p>Known for backwaters, greenery and peaceful nature.</p>
+            </div>
+            <div class="location-card">
+                <h3>Goa</h3>
+                <p>Famous for beautiful beaches, nightlife, water sports and Portuguese culture.</p>
+            </div>
+
+        </div>
+
+        <h2 style="color:white; margin-top:60px; margin-bottom:30px;">
+            Explore India's Top Locations
+        </h2>
+
+        <img src="images/india-map.png" alt="India Map" class="india-map">
+
+
+
+        <div class="location-container">
+
+            <div class="location-card" onclick="toggleInfo('kashmir')">
+                📍 Kashmir
+
+                <div id="kashmir" class="location-info">
+                    <p>🌄 Gulmarg</p>
+                    <p>🏔 Sonmarg</p>
+                    <p>🚤 Dal Lake</p>
+                </div>
+            </div>
+            <div class="location-card" onclick="toggleInfo('jaipur')">
+                📍 Jaipur
+
+                <div id="jaipur" class="location-info">
+                    <p>🏰 Amber Fort</p>
+                    <p>🌸 Hawa Mahal</p>
+                    <p>🏛 City Palace</p>
+                </div>
+            </div>
+            <div class="location-card" onclick="toggleInfo('kerala')">
+                📍 Kerala
+
+                <div id="kerala" class="location-info">
+                    <p>🚤 Alleppey</p>
+                    <p>🌴 Munnar</p>
+                    <p>🏖 Kovalam Beach</p>
+                </div>
+            </div>
+
+            <div class="location-card" onclick="toggleInfo('goa-info')">
+                📍 Goa
+
+                <div id="goa-info" class="location-info">
+                    <p>🏖 Baga Beach</p>
+                    <p>🌊 Calangute Beach</p>
+                    <p>⛪ Basilica of Bom Jesus</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact">
+
+        <h2>Contact Us</h2>
+
+        <p class="contact-text">
+            Have questions about your next trip? Get in touch with us.
+        </p>
+
+        <div class="contact-container">
+
+            <div class="contact-info">
+                <h3>Travel Guide India</h3>
+                <p>📍 New Delhi, India</p>
+                <p>📞 +91 98765 43210</p>
+                <p>📧 travelguideindia@gmail.com</p>
+            </div>
+
+            <form class="contact-form">
+
+                <input type="text" placeholder="Your Name" required>
+
+                <input type="email" placeholder="Your Email" required>
+
+                <textarea placeholder="Your Message" rows="5"></textarea>
+
+                <button type="submit">Send Message</button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <section class="audio-section">
+
+        <h2>Listen to India</h2>
+
+        <audio controls>
+            <source src="audio/india-music.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+    </section>
+
+    <script src="script.js"></script>
+    <div id="imagePopup" class="popup">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <img id="popupImg" src="" alt="">
+    </div><div id="videoPopup" class="popup">
+    <span class="close-btn" onclick="closeVideoPopup()">&times;</span>
+
+    <video controls autoplay width="700">
+        <source src="videos/india-videos.mp4" type="video/mp4">
+    </video>
+</div>
+
+    <footer>
+        <p>© 2026 Travel Guide India | All Rights Reserved</p>
+    </footer>
+
+</body>
+
+</html>
